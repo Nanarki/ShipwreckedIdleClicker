@@ -20,25 +20,31 @@
 	<div class="row" id="MainGame">
 	
 		<div class="col-sm-4" id="BaseStats">BaseStats:<p><p>
-		<span id="Strength">Strength: 0 (+0)</span><br>
-		Constitution: 0 (+0)<br>
-		Dexterity: 0 (+0)<br>
-		Intelegence: 0 (+0)<br>
-		Vitality: 0 (+0)<br><p>
-		<span id="HealthValue">Health:	1/1</span><br>
-		<span id="ManaValue">Mana: 1/1</span>
+			<span id="Strength">Strength: 0 (+0)</span><br>
+			Constitution: 0 (+0)<br>
+			Dexterity: 0 (+0)<br>
+			Intelegence: 0 (+0)<br>
+			Vitality: 0 (+0)<br><p>
+			<span id="HealthValue">Health:	1/1</span><br>
+			<span id="ManaValue">Mana: 1/1</span>
 		</div>
 		
-		<div class="col-sm-4" id="Resources">Resources: None<p><p>
+		<div class="col-sm-2" id="Resources">Resources: None<p><p>
 		
-		<span id="woodValue" style="visibility: hidden">Wood: 0</span>
+			<span id="woodValue" style="visibility: hidden">Wood: 0</span>
 		
+		</div>
+		
+		<div class="col-sm-2" id="Tools">Tools:<p><p>
+		
+			<span id="axeCount" style="visibility: hidden">Axe: 0</span>
+			
 		</div>
 		
 		<div class="col-sm-4" id="Controls">Controls<p><p>
 		
-		<button type="button" class="btn btn-primary" onClick="giveWood()">Gather Wood</button>
-		
+			<button type="button" class="btn btn-primary brown-background" onClick="giveWood()" style="background-color: brown">Gather Wood</button>
+			<button type="button" class="btn btn-primary brown-background" onClick="buyaxe()" style="visibility: hidden; background-color: silver" id="buyaxe">Buy axe</button>
 		</div>
 	
 	</div>

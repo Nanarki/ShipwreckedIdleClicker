@@ -23,11 +23,35 @@ var sandCount = 0;
 var woodDifficulty = 1000;
 var sandDifficulty = 500;
 
-//button funtions
+//setup resources tools
+var axeCount = 0;
+var axeMultiplier = 1;
+var axeCost = 10;
+
+//button funtions - resource
 
 function giveWood(){
-	woodCount = woodCount + 1;
+	woodCount = woodCount + (1 + (axeCount * axeMultiplier * 3));
 	document.getElementById("woodValue").innerHTML = "Wood: " + woodCount;
 	document.getElementById("woodValue").style.visibility = 'visible';
+	if (woodCount >= axeCost)
+	{document.getElementById("buyaxe").style.visibility = 'visible';}
 }
-	
+
+
+//button functions - tools	
+function buyaxe(){
+	if (woodCount >= axeCost)
+	{
+		woodCount = woodCount - axeCost;
+		axeCount = axeCount + 1;
+		axeCost = axeCost *1.1;
+		if (woodCount < axeCost)
+			{document.getElementById("buyaxe").style.visibility = 'hidden';}
+			document.getElementById("axeCount").innerHTML = "axes: " + axeCount;
+			document.getElementById("axeCount").style.visibility = 'visible';
+
+
+
+	}
+}
